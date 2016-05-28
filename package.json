@@ -1,0 +1,27 @@
+{
+  "name": "react-redux-base",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app/index.js",
+  "scripts": {
+    "html": "cp ./app/index.html build/index.html",
+    "watch": "watchify -t [ babelify ] ./app/index.js -o ./build/index.js -dv",
+    "serve": "browser-sync start --files \"./build\" --server ./build",
+    "start": "npm run html && npm run watch & npm run serve"
+  },
+  "author": "esteban.primost@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^15.0.2",
+    "react-dom": "^15.0.2",
+    "react-redux": "^4.4.5",
+    "redux": "^3.5.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.8.0",
+    "babel-plugin-transform-react-jsx": "^6.8.0",
+    "babel-preset-react": "^6.5.0",
+    "babelify": "^7.3.0",
+    "watchify": "^3.7.0"
+  }
+}
